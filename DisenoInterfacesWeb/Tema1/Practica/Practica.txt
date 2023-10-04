@@ -1,0 +1,9 @@
+Crear página con:
+    - Cabecera
+    - zona de navegación con 
+        - Resumen
+        - Colores
+        - Tipografía
+        - Iconografía
+    - zona de contenidos donde salga información según lo que elijas.
+        - Index 

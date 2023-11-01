@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      function menu() {
+        var cesta = [];
+        while (n1 != 5) {
+          var n1 = Number(
+            prompt(
+              "Elige una opción: \n 1.Ver cesta \n 2.Insertar un artículo \n 3.Borrar un artículo \n 4.Vaciar cesta \n 5.Salir"
+            )
+          );
+          var figura;
+          var valor1;
+          switch (n1) {
+            case 1:
+              verCesta(cesta);
+              break;
+            case 2:
+              var articulo = [];
+              insertarArticulo(articulo, cesta);
+              meterEnCesta(articulo, cesta);
+              break;
+            case 3:
+              borrarArticulo(cesta);
+              break;
+            case 4:
+              vaciarCesta(cesta);
+              break;
+            case 5:
+              break;
+            default:
+              alert("Por favor introduzca un número del 1 al 5");
+              break;
+          }
+        }
+      }
+
+      function verCesta(cesta) {
+        var total = 0;
+        var header = "Cod. Articulo Precio Cantidad Subtotal \n";
+        for (var i = 0; i < cesta.length; i++) {
+          for (var j = 0; j < cesta[i].length; j++){
+            if (cesta[i][0] !== 0){
+            header = header + cesta[i].codigo + cesta[i].art + cesta[i].precio + cesta[i].cantidad + cesta[i].subtotal;
+          }
+          }
+          
+          total = total + cesta[i].subtotal;
+        }
+
+        alert (header);
+      }
+
+      function insertarArticulo(articulo, cesta) {
+        var codigo = Number(cesta.length) + 1;
+        var art = prompt("Introduzca el articulo");
+        var precio = Number(prompt("Introduzca el precio del artículo"));
+        var cantidad = Number(prompt("Introduzca la cantidad de artículos"));
+        var subtotal = precio * cantidad;
+        articulo.push(codigo, art, precio, cantidad, subtotal);
+        return articulo;
+      }
+
+      function meterEnCesta(articulo, cesta) {
+        cesta.push(articulo);
+        return cesta;
+      }
+
+      function borrarArticulo(cesta) {
+        var codigoEliminar = prompt("¿Cual es el codigo del producto que desea eliminar?");
+        for (var i = 0; i < cesta.length; i++){
+          if(cesta[i][0] === codigoEliminar){
+            cesta[i][0] = 0;
+            cesta[i][4] = 0
+          }
+        }
+
+      }
+
+      function vaciarCesta(cesta) {
+        cesta.length = 0;
+        return cesta;
+      }
+    </script>
+  </head>
+  <body onload="menu();"></body>
+</html>

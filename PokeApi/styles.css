@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #eff1f0;
+}
+
+/* ##################ZONA HEADER#################### */
+.header {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* grid-template-columns: repeat(14, 1fr); */
+  background-color: #ef5350;
+}
+
+.header__zonaTitulo {
+  /* grid-column: 2/4; */
+  height: 100%;
+  /* margin: -21px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+.zonaTitulo__logo img {
+  height: 42px;
+  padding: 5px;
+}
+.zonaTitulo__logo img:hover {
+  background-color: #e94141;
+}
+
+.header__zonaNavegacion {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /*Establecemos aire entre elementos*/
+}
+.header__zonaNavegacion a {
+  text-decoration: none;
+  color: white;
+}
+
+.zonaNavegacion__div {
+  padding: 15px;
+}
+
+.zonaNavegacion__div:hover {
+  background-color: #e94141;
+  text-decoration: underline;
+  color: white;
+}
+
+.zonaNavegacion__div h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ##################ZONA MAIN#################### */
+
+.main {
+  /* margin-top: 10px; */
+  /* display: grid;
+  grid-template-columns: repeat(12, 1fr); fr: unidad de medida */
+  display: flex;
+  justify-content: center;
+  /*Establecemos tamaño minimo a la row*/
+  /* grid-auto-rows: minmax(200px, auto); */
+
+  /* Aplicamos un poco de aire
+    row-gap: 10px;
+    column-gap: 10px; */
+    
+}
+/* ##################ZONA MAIN --- NAVEGACIÓN#################### */
+
+.main__zonaNavegacion {
+  background-color: white;
+  /* grid-column: 3/5; */
+  display: block;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  align-items:baseline;
+  width: 250px;
+
+}
+
+
+.main__zonaNavegacion h3 {
+  margin-left: 15px;
+  font-weight: 700;
+  margin-bottom: 40px;
+
+}
+.main__zonaNavegacion h5 {
+  margin-left: 15px;
+  margin-top: -18px;
+  font-weight: 400;
+  
+}
+.main__zonaNavegacion h5>hr {
+  margin-right: 120px;
+  
+}
+
+
+.main__zonaNavegacion a {
+  text-decoration: none;
+}
+.main__zonaNavegacion a:hover {
+  text-decoration: underline;
+  background-color: #cee9f9;
+}
+
+/* ##################ZONA MAIN --- CONTENIDO#################### */
+
+.main__zonaContenido {
+  /* grid-column: 5/11; */
+  /* background-color: cadetblue; */
+  width: 900px;
+  background-color: white;
+
+}
+.zonaContenido__Informacion{
+  margin-top: 30px;
+ margin-left: 5px;
+}
+
+
+
+.informacion__button{
+  
+  border: 1px solid;
+  border-radius: 3px;
+  font-weight: 300; 
+  
+  
+}
+
+.main__zonaContenido p{
+  font-weight: 400;
+  
+}
+.main__zonaContenido a{
+  text-decoration: none;
+}
+.main__zonaContenido a:hover{
+  text-decoration: underline;
+  background-color: #cee9f9;
+}
+.informacion__codigoGET{
+  font-size: large;
+}
+.informacion__GET{
+  background-color: #1172DB;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: white;
+}
+
+.informacion__codigo{
+  background-color: #eff1f0;
+  margin-right: 15px;
+  padding: 10px;
+  padding-bottom: 0px;
+  font-weight: 400;
+}
+.informacion__subtituloResourceLists{
+  font-weight: 400;
+  font-size: 0.8em;
+  color: gray;
+}
+.informacion__subtitulo{
+  font-weight: 400;
+  color: gray;
+}
+
+.informacion__tabla{
+  align-items: right;
+  
+}
+.informacion__tabla td{
+  font-weight: 300;
+  color: gray;
+}

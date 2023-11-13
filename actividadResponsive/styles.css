@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Roboto&display=swap");
+
+@font-face {
+    font-family: "CarnevaleeFreakshow";
+    src: url("fonts/CarnevaleeFreakshow.ttf") format("truetype");
+}
+
+
+body{
+    margin: 0;
+    background-color: #252850;
+}
+.header {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+  
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    
+    display: flex;
+
+    background-color: black;
+    color: #fff;
+    /* background: linear-gradient(45deg, black, #DAA520); */
+    
+  }
+  
+  .header__zonaTitulo {
+    height: 100%;
+    width: 40%;
+  
+    border-radius: 20px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  
+    transition: 0.2s linear;
+  }
+  
+  .header__zonaTitulo:hover {
+    background-color: black;
+    transform: scale(1);
+  
+    font-size: 1.2em; /*em es una medida que toma como referencia el font-size del html*/
+  }
+
+  #tituloPagina {
+    font-family: "CarnevaleeFreakshow", sans-serif;
+
+  }
+  
+  #zonaTitulo__logo img {
+    width: 80px;
+    height: auto;
+  }
+  
+  .header__zonaNavegacion {
+    height: 100%;
+    width: 40%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /*Establecemos aire entre elementos*/
+  }
+  
+  .header__zonaNavegacion a {
+    text-decoration: none; /*Para quitar el underline*/
+    color: #fff;
+  }
+  
+  .zonaNavegacion__nav {
+    padding: 5px;
+    transition: 0.1s ease-out;
+    font-family: "CarnevaleeFreakshow", sans-serif;
+    color: #fff;
+    
+  }
+  
+  .zonaNavegacion__nav:hover {
+    border-bottom: 3px solid #fff;
+    border-radius: 5px;
+  }
+  
+  .zonaNavegacion__nav h2 {
+    margin: 0;
+  }
+
+  /*
+************ZONA MAIN*************
+*/
+
+.zonaMain {
+  margin: 10px;
+
+  display: grid;
+  /*Cuantas columnas queremos*/
+  grid-template-columns: repeat(12, 1fr); /*fr: unidad de medida*/
+
+  /*Establecemos tamaño minimo a la row*/
+  grid-auto-rows: minmax(200px, auto);
+
+  /*Aplicamos un poco de aire*/
+  row-gap: 0px;
+  column-gap: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-color: #252850;
+}
+
+.main__zonaContenido{
+  grid-column: 1/9;
+}
+
+.main__zonaImagen {
+  /* grid-column: 1/9; */
+  /* height: 100%; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.main__zonaImagen img{
+  height: 100%;
+  width: 100%;
+}
+.main__zonaArticulo {
+  /* grid-column: 1/9; */
+}
+
+.main__zonaArticulo h1 {
+  /* grid-column: 1/9; */
+  font-family: "CarnevaleeFreakshow", sans-serif;
+}
+.main__zonaArticulo h2 {
+  /* grid-column: 1/9; */
+  font-family: "CarnevaleeFreakshow", sans-serif;
+}
+.main__zonaLista {
+grid-column: 9/13;
+background-color: #000;
+padding-left: 10px;
+border: 5px solid transparent;
+border-image: linear-gradient(45deg, blue, white, red) 1;
+}
+
+.main__zonaLista h2{
+  font-family: "CarnevaleeFreakshow", sans-serif;
+}
+
+
+

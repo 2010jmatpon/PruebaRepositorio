@@ -1,0 +1,205 @@
+//Colores textos
+$color-texto: #222222;
+$color-texto-cabecera: #ffffff;
+$color-texto-pie: #ffffff;
+$color-enlaces: #cc0000;
+$color-enlaces-hover: #2222;
+$color-texto-navegacion: #2222;
+$color-texto-navegacion-hover: #cc0000;
+
+//Colores fondo
+$color-fondo-cabecera: #000000;
+$color-fondo-pie: #3b3b3b;
+$color-fondo: #eeeeee;
+
+//Colores bordes
+
+$color-borde-navegacion: #cc0000;
+$color-borde: #dddddd;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Roboto&display=swap");
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+@mixin cambiar-fondo-y-letra($color-nuevo-fondo: #eeeeee, $color-nuevo-letra: #222222) {
+    background-color: $color-nuevo-fondo;
+    color: $color-nuevo-letra;
+}
+
+@mixin establecer-grid($n-columnas: 12) {
+    display: grid;
+    grid-template-columns: repeat($n-columnas, 1fr);
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    @include cambiar-fondo-y-letra($color-fondo-cabecera, $color-texto-cabecera);
+    @include establecer-grid();
+
+    div {
+        grid-column: 3/11;
+    }
+}
+
+.nav-bar {
+    // @include cambiar-fondo-y-letra($color-fondo, $color-texto-navegacion);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: -10px;
+    padding-top: 1em;
+    padding-bottom: 1.75em;
+    border-bottom: 2px solid $color-borde;
+
+    div {
+        padding-left: 1em;
+        padding-right: 1em;
+
+        a {
+            text-decoration: none;
+            // padding-left: 1em;
+            // padding-right: 1em;
+            padding-bottom: 0.5em;
+            color: inherit; //Hereda el color de su padre
+        }
+
+        a:hover {
+            border-bottom: 3px solid $color-borde-navegacion;
+        }
+    }
+    .a__active {
+        border-bottom: 3px solid $color-borde-navegacion;
+    }
+}
+
+.zonaMain {
+    @include establecer-grid();
+    .zonaContenido {
+        grid-column: 3/11;
+        text-align: justify;
+        h1 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        h2 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+        // h6 {
+        //     font-family: Georgia, "Times New Roman", Times, serif;
+        // }
+        .parrafo1 {
+            font-size: large;
+            margin-left: 2em;
+            margin-right: 2em;
+            padding: 0.5em;
+            border-bottom: 2.5px solid $color-borde;
+            border-top: 2.5px solid $color-borde;
+        }
+        a {
+            text-decoration: none;
+
+            padding-bottom: 0.5em;
+            color: $color-enlaces;
+        }
+
+        a:hover {
+            color: $color-enlaces-hover;
+        }
+    }
+
+    .zonaImg {
+        grid-column: 4/10;
+        img {
+            width: 100%;
+        }
+        figcaption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+
+                padding-bottom: 0.5em;
+                color: $color-enlaces;
+            }
+
+            a:hover {
+                color: $color-enlaces-hover;
+            }
+        }
+    }
+    .zonaVideo {
+        grid-column: 4/10;
+        iframe {
+            width: 100%;
+        }
+        figcaption {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+
+                padding-bottom: 0.5em;
+                color: $color-enlaces;
+            }
+
+            a:hover {
+                color: $color-enlaces-hover;
+            }
+        }
+    }
+
+    #zonaAutor {
+        margin-left: 5em;
+        margin-right: 5em;
+        .zonaImgAut {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .imgRedonda {
+                img {
+                    grid-column: 4/5;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 150px;
+                }
+            }
+
+            .zonaTexto {
+                grid-column: 6/10;
+                padding: 1em;
+            }
+        }
+        a {
+            text-decoration: none;
+
+            padding-bottom: 0.5em;
+            color: $color-enlaces;
+        }
+
+        a:hover {
+            color: $color-enlaces-hover;
+        }
+
+        i {
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+    }
+}
+
+.footer {
+    @include cambiar-fondo-y-letra($color-fondo-pie, $color-texto-pie);
+    @include establecer-grid();
+    padding-bottom: 4em ;
+    img, p {
+        grid-column: 3/11;
+        font-size: smaller;
+    }
+}
